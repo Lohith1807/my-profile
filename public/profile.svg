@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#311042" />
+    </linearGradient>
+    
+    <!-- Cyber Neon Gradients -->
+    <linearGradient id="cyberCyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052d4" />
+      <stop offset="50%" stop-color="#4364f7" />
+      <stop offset="100%" stop-color="#6fb1fc" />
+    </linearGradient>
+    
+    <linearGradient id="avatarGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    
+    <linearGradient id="accentOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f857a6" />
+      <stop offset="100%" stop-color="#ff5858" />
+    </linearGradient>
+
+    <!-- Filters for Glow Effects -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="512" height="512" rx="40" fill="url(#bgGrad)" />
+  
+  <!-- Outer Tech Ring (Decorative) -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="url(#avatarGlow)" stroke-width="1.5" stroke-dasharray="15, 10" opacity="0.4" />
+  <circle cx="256" cy="256" r="210" fill="none" stroke="url(#cyberCyan)" stroke-width="3" stroke-dasharray="200, 100, 50, 80" opacity="0.6" />
+  
+  <!-- Cyber HUD Tech Details -->
+  <path d="M 120 70 L 80 110 L 80 160" fill="none" stroke="#00f2fe" stroke-width="2" opacity="0.5" />
+  <circle cx="120" cy="70" r="3" fill="#00f2fe" />
+  <path d="M 392 70 L 432 110 L 432 160" fill="none" stroke="#f857a6" stroke-width="2" opacity="0.5" />
+  <circle cx="392" cy="70" r="3" fill="#f857a6" />
+  
+  <!-- Coding Brackets Float background -->
+  <text x="75" y="240" font-family="'Courier New', monospace" font-size="36" font-weight="bold" fill="url(#avatarGlow)" opacity="0.25" filter="url(#neonGlow)">&lt;/&gt;</text>
+  <text x="390" y="270" font-family="'Courier New', monospace" font-size="42" font-weight="bold" fill="url(#accentOrange)" opacity="0.25" filter="url(#neonGlow)">{ }</text>
+  <text x="235" y="70" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#6fb1fc" opacity="0.5" letter-spacing="4">DEVELOPER</text>
+
+  <!-- Main Character Avatar Group with soft shadow -->
+  <g filter="url(#softShadow)">
+    <!-- Shoulders / Torso -->
+    <path d="M 136 430 
+             C 136 360, 170 330, 210 325 
+             L 220 345 
+             C 220 345, 235 365, 256 365
+             C 277 365, 292 345, 292 345 
+             L 302 325 
+             C 342 330, 376 360, 376 430 
+             Z" fill="url(#cyberCyan)" />
+
+    <!-- Hoodie Details (Inner V-neck) -->
+    <path d="M 220 345 C 235 365, 256 365, 272 345 L 256 395 Z" fill="#1e1b4b" opacity="0.8" />
+    
+    <!-- Neck -->
+    <path d="M 228 290 L 284 290 L 284 340 L 228 340 Z" fill="#f1f5f9" opacity="0.85" />
+    <path d="M 228 320 C 248 340, 264 340, 284 320 Z" fill="#e2e8f0" />
+
+    <!-- Head / Face -->
+    <rect x="206" y="170" width="100" height="130" rx="50" fill="#f8fafc" />
+    
+    <!-- Hair (Stylized Modern Quiff/Undercut) -->
+    <path d="M 200 200 
+             C 195 160, 215 125, 256 125 
+             C 297 125, 317 155, 312 200 
+             C 310 190, 305 180, 295 180
+             C 285 180, 280 190, 270 185
+             C 260 180, 250 180, 240 185
+             C 230 190, 220 180, 210 185
+             C 205 188, 202 195, 200 200 Z" fill="#0f172a" />
+             
+    <!-- Glasses (Neon Framed Smart/Developer Glasses) -->
+    <!-- Left Glass -->
+    <rect x="214" y="210" width="36" height="26" rx="8" fill="none" stroke="url(#avatarGlow)" stroke-width="3" filter="url(#neonGlow)" />
+    <!-- Right Glass -->
+    <rect x="262" y="210" width="36" height="26" rx="8" fill="none" stroke="url(#avatarGlow)" stroke-width="3" filter="url(#neonGlow)" />
+    <!-- Bridge -->
+    <path d="M 250 220 L 262 220" fill="none" stroke="url(#avatarGlow)" stroke-width="3" filter="url(#neonGlow)" />
+    <!-- Side arms -->
+    <path d="M 206 220 L 214 220" fill="none" stroke="url(#avatarGlow)" stroke-width="3" />
+    <path d="M 298 220 L 306 220" fill="none" stroke="url(#avatarGlow)" stroke-width="3" />
+
+    <!-- Glowing Cyber Headset / Headphones -->
+    <!-- Left Ear Cup -->
+    <rect x="190" y="195" width="18" height="50" rx="9" fill="url(#accentOrange)" filter="url(#neonGlow)" />
+    <!-- Right Ear Cup -->
+    <rect x="304" y="195" width="18" height="50" rx="9" fill="url(#accentOrange)" filter="url(#neonGlow)" />
+    <!-- Headband -->
+    <path d="M 199 195 C 199 140, 313 140, 313 195" fill="none" stroke="url(#accentOrange)" stroke-width="5" filter="url(#neonGlow)" />
+    
+    <!-- Smile/Expression -->
+    <path d="M 244 265 C 248 272, 264 272, 268 265" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Glowing Accent Dots (Tech nodes) -->
+  <circle cx="256" cy="480" r="4" fill="#00f2fe" filter="url(#neonGlow)" />
+  <circle cx="236" cy="480" r="3" fill="#00f2fe" opacity="0.5" />
+  <circle cx="276" cy="480" r="3" fill="#00f2fe" opacity="0.5" />
+</svg>
