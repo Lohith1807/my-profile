@@ -40,7 +40,7 @@ const Navbar = ({ isVisible }) => {
     <nav className={`navbar ${isVisible ? 'visible' : ''}`}>
       <div className="nav-container">
         <a href="#" className="nav-logo" onClick={(e) => handleLinkClick(e, 'home')}>
-          K. <span>Lohith</span>
+          <span className="logo-bracket">&lt;</span>K.<span className="logo-name">LOHITH</span><span className="logo-bracket">/&gt;</span>
         </a>
         <button 
           className={`hamburger ${isOpen ? 'active' : ''}`} 

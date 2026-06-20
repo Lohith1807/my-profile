@@ -8,7 +8,6 @@ const Projects = () => {
       name: 'EMS DBMS',
       desc: 'An Employee Management System with database integration for managing staff, attendance, and organizational data securely.',
       icon: 'fa-solid fa-users-gear',
-      image: null,
       tags: ['MERN','Database Management', 'Web App', 'DBMS'],
       link: 'https://github.com/Lohith1807',
       deployLink: 'https://ems-dbms.vercel.app/'
@@ -17,7 +16,6 @@ const Projects = () => {
       name: 'Project Review DB',
       desc: 'A comprehensive platform for reviewing and managing projects, complete with user authentication and database storage.',
       icon: 'fa-solid fa-clipboard-check',
-      image: '/images/project_review.png',
       tags: ['MERN','Authentication', 'Database', 'Review System'],
       link: 'https://github.com/Lohith1807',
       deployLink: 'https://project-reviewdb.vercel.app/login'
@@ -26,7 +24,6 @@ const Projects = () => {
       name: 'Apollo College & Event Portals',
       desc: 'A dual-platform system featuring a comprehensive college EMS portal (student details, marks, exam scheduling, classroom notifications) paired with an integrated event registration application.',
       icon: 'fa-solid fa-building-columns',
-      image: null,
       tags: ['Full Stack', 'Education', 'Event Management'],
       link: 'https://github.com/Lohith1807',
       deployLink: 'https://apollo-demopage.vercel.app/'
@@ -35,7 +32,6 @@ const Projects = () => {
       name: 'Telegram Attendance Bot',
       desc: 'A custom Telegram bot designed to automatically track, manage, and retrieve student attendance records seamlessly through a chat interface.',
       icon: 'fa-brands fa-telegram',
-      image: null,
       tags: ['Node.js', 'Telegram API', 'Automation', 'Bot'],
       link: 'https://github.com/Lohith1807',
       deployLink: null
@@ -44,7 +40,6 @@ const Projects = () => {
       name: 'More on GitHub...',
       desc: 'There are still many more tools, scripts, and experimental applications available on my GitHub profile. Feel free to explore my repositories!',
       icon: 'fa-brands fa-github',
-      image: null,
       tags: ['Open Source', 'Experiments', 'Mini Projects'],
       link: 'https://github.com/Lohith1807',
       deployLink: null
@@ -64,16 +59,9 @@ const Projects = () => {
       <div className="projects-grid">
         {projectList.map((project, index) => (
           <div key={index} className="project-card flat-card interactive-card" onClick={() => setSelectedProject(project)}>
-            {project.image && (
-              <div className="project-thumbnail">
-                <img src={project.image} alt={project.name} />
-              </div>
-            )}
-            {!project.image && (
-              <div className="project-icon-box">
-                <i className={project.icon}></i>
-              </div>
-            )}
+            <div className="project-icon-box">
+              <i className={project.icon}></i>
+            </div>
             <h3 className="project-name">{project.name}</h3>
             <p className="project-desc">{project.desc}</p>
             <div className="project-tags">
@@ -96,15 +84,9 @@ const Projects = () => {
             <button className="close-modal-btn" onClick={closeModal}>
               <i className="fa-solid fa-xmark"></i>
             </button>
-            {selectedProject.image ? (
-              <div className="modal-project-image">
-                <img src={selectedProject.image} alt={selectedProject.name} />
-              </div>
-            ) : (
-              <div className="modal-icon-box">
-                <i className={selectedProject.icon}></i>
-              </div>
-            )}
+            <div className="modal-icon-box">
+              <i className={selectedProject.icon}></i>
+            </div>
             <h2 className="modal-project-name">{selectedProject.name}</h2>
             <div className="modal-tags">
               {selectedProject.tags.map((tag, idx) => (

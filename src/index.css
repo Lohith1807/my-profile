@@ -213,8 +213,8 @@ h1, h2, h3, h4, .nav-logo {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .landing-subtitle {
@@ -315,14 +315,22 @@ h1, h2, h3, h4, .nav-logo {
 }
 
 .nav-logo {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   text-decoration: none;
-  text-transform: uppercase;
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.5px;
 }
 
-.nav-logo span {
+.logo-bracket {
   color: var(--rh-red);
+  font-weight: 800;
+}
+
+.logo-name {
+  color: var(--rh-red);
+  font-weight: 800;
 }
 
 .nav-menu {
@@ -1094,7 +1102,131 @@ h1, h2, h3, h4, .nav-logo {
 
 /* --- 8. EXPERIENCE (Migrated to Grid) --- */
 
-/* /* --- 9. CONTACT SECTION --- */
+/* --- 9. CERTIFICATIONS SECTION --- */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.2rem;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  border-color: var(--rh-red);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.cert-logo-box {
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: var(--transition-smooth);
+}
+
+.cert-card:hover .cert-logo-box {
+  transform: scale(1.08);
+}
+
+.cert-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cert-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.landing-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.landing-about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.landing-about-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.landing-about-row span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.landing-about-row i {
+  color: var(--rh-red);
+  font-size: 0.85rem;
+}
+
+.cert-issuer {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.cert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.cert-tags span {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-primary);
+  padding: 2px 7px;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+}
+
+.cert-view-btn {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rh-red);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* --- 10. CONTACT SECTION --- */
+
 .social-links-grid {
   display: flex;
   flex-wrap: wrap;

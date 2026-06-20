@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import About from './components/About';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Experience from './components/Experience';
@@ -101,7 +100,7 @@ function App() {
   };
 
   const initScrollObserver = () => {
-    const revealElements = document.querySelectorAll('.reveal, .timeline-item');
+    const revealElements = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -110,8 +109,8 @@ function App() {
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0,
+      rootMargin: '0px 0px 0px 0px'
     });
 
     revealElements.forEach(el => observer.observe(el));
@@ -132,8 +131,15 @@ function App() {
           {/* Profile picture is positioned fixed over this space initially */}
         </div>
         <div className="landing-text">
-          <h1 className="landing-title">K Lohith</h1>
-          <p className="landing-subtitle">Portfolio Space</p>
+          <h1 className="landing-title"><span className="logo-bracket">&lt;</span>K.<span className="logo-name">LOHITH</span><span className="logo-bracket">/&gt;</span></h1>
+          <p className="landing-subtitle">Full Stack Developer &amp; CSE Student</p>
+          <div className="landing-about">
+            <div className="landing-about-row">
+              <span><i className="fa-solid fa-building-columns"></i> The Apollo University</span>
+              <span><i className="fa-solid fa-graduation-cap"></i> B.Tech CSE — 3rd Year / 5th Sem</span>
+              <span><i className="fa-solid fa-location-dot"></i> Andhra Pradesh, India</span>
+            </div>
+          </div>
           <button 
             id="explore-btn" 
             className="explore-btn" 
@@ -158,19 +164,16 @@ function App() {
         {/* 3. HOME SECTION */}
         <Home landingZoneRef={landingZoneRef} />
 
-        {/* 4. ABOUT SECTION */}
-        <About />
-
-        {/* 5. PROJECTS SECTION */}
+        {/* 4. PROJECTS SECTION */}
         <Projects />
 
-        {/* 6. CERTIFICATIONS SECTION */}
+        {/* 5. CERTIFICATIONS SECTION */}
         <Certifications />
 
-        {/* 7. EXPERIENCE SECTION */}
+        {/* 6. EXPERIENCE SECTION */}
         <Experience />
 
-        {/* 8. CONTACT ME SECTION */}
+        {/* 7. CONTACT ME SECTION */}
         <Contact />
 
       </main>
