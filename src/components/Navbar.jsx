@@ -6,7 +6,7 @@ const Navbar = ({ isVisible }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'experience', 'contact'];
+      const sections = ['home', 'about', 'projects', 'certifications', 'experience', 'contact'];
       let currentSection = 'home';
       
       for (const sectionId of sections) {
@@ -63,11 +63,29 @@ const Navbar = ({ isVisible }) => {
           </li>
           <li className="nav-item">
             <a 
+              href="#about" 
+              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
+              onClick={(e) => handleLinkClick(e, 'about')}
+            >
+              About
+            </a>
+          </li>
+          <li className="nav-item">
+            <a 
               href="#projects" 
               className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
               onClick={(e) => handleLinkClick(e, 'projects')}
             >
               Projects
+            </a>
+          </li>
+          <li className="nav-item">
+            <a 
+              href="#certifications" 
+              className={`nav-link ${activeSection === 'certifications' ? 'active' : ''}`}
+              onClick={(e) => handleLinkClick(e, 'certifications')}
+            >
+              Certifications
             </a>
           </li>
           <li className="nav-item">

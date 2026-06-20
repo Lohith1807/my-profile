@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import About from './components/About';
 import Projects from './components/Projects';
+import Certifications from './components/Certifications';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 
@@ -156,13 +158,19 @@ function App() {
         {/* 3. HOME SECTION */}
         <Home landingZoneRef={landingZoneRef} />
 
-        {/* 4. PROJECTS SECTION */}
+        {/* 4. ABOUT SECTION */}
+        <About />
+
+        {/* 5. PROJECTS SECTION */}
         <Projects />
 
-        {/* 5. EXPERIENCE SECTION */}
+        {/* 6. CERTIFICATIONS SECTION */}
+        <Certifications />
+
+        {/* 7. EXPERIENCE SECTION */}
         <Experience />
 
-        {/* 6. CONTACT ME SECTION */}
+        {/* 8. CONTACT ME SECTION */}
         <Contact />
 
       </main>
