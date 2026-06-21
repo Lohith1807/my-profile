@@ -1351,41 +1351,91 @@ footer a:hover {
 
 @media (max-width: 768px) {
   :root {
-    --orbit-radius: 115px;
-    --orbit-size: 270px;
-    --avatar-size: 150px;
+    --orbit-radius: 100px;
+    --orbit-size: 230px;
+    --avatar-size: 110px;
   }
-  
+
+  /* Landing page avatar circle also shrinks */
+  #landing-avatar-placeholder {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1.8rem;
+  }
+
+  /* Orbit rings */
+  .orbit-ring.inner-ring {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+  }
+
+  .orbit-ring.outer-ring {
+    width: 320px;
+    height: 320px;
+    margin-top: -160px;
+    margin-left: -160px;
+  }
+
+  /* Icon translation radii to match ring sizes */
+  .inner-ring .orbit-icon {
+    transform: rotate(var(--angle)) translate(100px);
+  }
+
+  .outer-ring .orbit-icon {
+    transform: rotate(var(--angle)) translate(160px);
+  }
+
+  /* Orbit icons */
+  .orbit-icon-inner.glass-icon {
+    width: 42px;
+    height: 42px;
+    top: -21px;
+    left: -21px;
+    font-size: 1rem;
+  }
+
+  .orbit-icon-inner::after {
+    bottom: -26px;
+    font-size: 0.55rem;
+  }
+
+  /* Hero visual container height */
+  .hero-visual {
+    height: 360px;
+  }
+
   .landing-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
-  
+
   .hero-title {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
   }
-  
+
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
-  
+
   /* Navbar Mobile Hamburger Toggle */
   .hamburger {
     display: block;
     z-index: 101;
   }
-  
+
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
   }
-  
+
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
   }
-  
+
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -1400,59 +1450,92 @@ footer a:hover {
     justify-content: center;
     border-bottom: 1px solid var(--border-color);
   }
-  
+
   .nav-menu.active {
     left: 0;
   }
-  
+
   .nav-item {
     margin: 1.2rem 0;
     height: auto;
   }
-  
+
   .nav-link {
     font-size: 1.2rem;
     padding: 0.5rem 0;
   }
-  
-
 }
 
 @media (max-width: 480px) {
   :root {
-    --orbit-radius: 95px;
-    --orbit-size: 220px;
-    --avatar-size: 120px;
+    --orbit-radius: 75px;
+    --orbit-size: 180px;
+    --avatar-size: 85px;
   }
-  
-  .orbit-icon {
-    width: 36px;
-    height: 36px;
-    margin-top: -18px;
-    margin-left: -18px;
+
+  /* Landing page avatar circle also shrinks */
+  #landing-avatar-placeholder {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 1.4rem;
   }
-  
-  .orbit-icon-inner {
-    width: 36px;
-    height: 36px;
-    font-size: 1.05rem;
+
+  /* Orbit rings */
+  .orbit-ring.inner-ring {
+    width: 150px;
+    height: 150px;
+    margin-top: -75px;
+    margin-left: -75px;
   }
-  
+
+  .orbit-ring.outer-ring {
+    width: 240px;
+    height: 240px;
+    margin-top: -120px;
+    margin-left: -120px;
+  }
+
+  /* Icon translation radii to match ring sizes */
+  .inner-ring .orbit-icon {
+    transform: rotate(var(--angle)) translate(75px);
+  }
+
+  .outer-ring .orbit-icon {
+    transform: rotate(var(--angle)) translate(120px);
+  }
+
+  /* Orbit icons */
+  .orbit-icon-inner.glass-icon {
+    width: 34px;
+    height: 34px;
+    top: -17px;
+    left: -17px;
+    font-size: 0.85rem;
+  }
+
   .orbit-icon-inner::after {
-    bottom: -28px;
-    font-size: 0.55rem;
+    bottom: -24px;
+    font-size: 0.5rem;
   }
-  
+
   .hero-visual {
-    height: 340px;
+    height: 290px;
   }
-  
+
+  .landing-title {
+    font-size: 1.7rem;
+  }
+
   .hero-title {
-    font-size: 2rem;
-  }
-  
-  .section-title {
     font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
   }
 }
 
