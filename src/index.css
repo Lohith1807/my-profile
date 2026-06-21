@@ -1472,3 +1472,15 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* --- 13. MOBILE PHONE NUMBER VISIBILITY --- */
+/* Hide phone number exclusively on mobile/tablet; desktop is untouched */
+@media (max-width: 768px) {
+  .phone-info-card {
+    display: none;
+  }
+
+  .footer-phone {
+    display: none;
+  }
+}

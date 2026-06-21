@@ -182,7 +182,7 @@ function App() {
       <footer>
         <div className="footer-content">
           <p>© 2026 K Lohith. All Rights Reserved.</p>
-          <p>Email: <a href="mailto:lohithreddy1819@gmail.com">lohithreddy1819@gmail.com</a> | Phone: +91 8309953012</p>
+          <p>Email: <a href="mailto:lohithreddy1819@gmail.com">lohithreddy1819@gmail.com</a></p>
         </div>
       </footer>
     </>

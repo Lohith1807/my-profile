@@ -4,7 +4,6 @@ const About = () => {
   const details = [
     { label: 'Name', value: 'K Lohith', icon: 'fa-solid fa-user' },
     { label: 'Email', value: 'lohithreddy1819@gmail.com', icon: 'fa-solid fa-envelope' },
-    { label: 'Phone', value: '+91 8309953012', icon: 'fa-solid fa-phone' },
     { label: 'University', value: 'The Apollo University', icon: 'fa-solid fa-building-columns' },
     { label: 'Degree', value: 'B.Tech — CSE', icon: 'fa-solid fa-graduation-cap' },
     { label: 'Year / Sem', value: '3rd Year / 5th Semester', icon: 'fa-solid fa-calendar-days' },

@@ -21,12 +21,6 @@ const Contact = () => {
       color: '#0A66C2'
     },
     {
-      name: 'WhatsApp',
-      icon: 'fa-brands fa-whatsapp',
-      link: 'https://wa.me/918309953012',
-      color: '#25D366'
-    },
-    {
       name: 'Instagram',
       icon: 'fa-brands fa-instagram',
       link: 'https://instagram.com/lohith_.reddyy',
